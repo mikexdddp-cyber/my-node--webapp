@@ -1,0 +1,43 @@
+<%- include('partials/head') %>
+<%- include('partials/navbar') %>
+
+<main class="container d-flex flex-column justify-content-center" style="min-height: 80vh;">
+  <h2 class="mb-4">รายการสินค้า (Roblox Shop)</h2>
+
+  <table class="table table-bordered table-striped text-center">
+    <thead class="table-dark">
+      <tr>
+        <th>ID</th>
+        <th>ชื่อสินค้า</th>
+        <th>หมวดหมู่</th>
+        <th>ราคา (บาท)</th>
+        <th>จำนวนคงเหลือ</th>
+        <th>หมายเหตุ</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% if (products_data.length > 0) { %>
+        <% products_data.forEach(function(product) { %>
+          <tr>
+            <td><%= product.product_id %></td>
+            <td class="text-start"><%= product.product_name %></td>
+            <td>
+              <span class="badge bg-primary"><%= product.category %></span>
+            </td>
+            <!-- สังเกตว่าใช้ bracket notation ['price(baht)'] เพราะชื่อคอลัมน์มีวงเล็บ -->
+            <td class="text-success fw-bold"><%= product['price(baht)'] %> ฿</td>
+            <td><%= product.stock %></td>
+            <td class="text-start"><%= product.note %></td>
+          </tr>
+        <% }); %>
+      <% } else { %>
+        <tr>
+          <td colspan="6" class="text-center text-muted">ยังไม่มีข้อมูลสินค้าในระบบ</td>
+        </tr>
+      <% } %>
+    </tbody>
+  </table>
+</main>
+
+<%- include('partials/footer') %>

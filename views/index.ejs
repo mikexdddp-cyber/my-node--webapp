@@ -1,0 +1,41 @@
+<%- include('partials/head') %> <%- include('partials/navbar') %>
+<main class="container px-4 px-lg-5 hero">
+  <div class="row align-items-center gx-5 gy-5">
+    <div class="col-lg-6">
+      <h1 class="mb-4">Welcome to Roblox</h1>
+      <p class="mb-4">
+        Roblox คือแพลตฟอร์มเกมออนไลน์ที่เปิดโอกาสให้ผู้เล่นได้สร้าง เล่น
+        และแบ่งปันประสบการณ์เกมของตนเองกับผู้เล่นทั่วโลก
+        ไม่ว่าจะเป็นเกมแนวผจญภัย เอาชีวิตรอด จำลองสถานการณ์
+        หรือเกมแข่งขันสุดมันส์ คุณสามารถค้นพบโลกใหม่ได้ไม่รู้จบ
+      </p>
+      <a href="https://www.roblox.com" class="btn btn-primary btn-lg">
+        เข้าเว็บไซต์ Roblox
+      </a>
+    </div>
+    <div class="col-lg-6">
+      <div class="form-panel p-4 p-md-5">
+        <form>
+          <div class="mb-3">
+            <label class="form-label">ชื่อ</label>
+            <input type="text" class="form-control" placeholder="กรอกชื่อ" />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">อีเมล</label>
+            <input type="email" class="form-control" placeholder="กรอกอีเมล" />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">ข้อความ</label>
+            <textarea
+              class="form-control"
+              rows="4"
+              placeholder="กรอกข้อความ"
+            ></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">ส่งข้อมูล</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</main>
+<%- include('partials/footer') %>
